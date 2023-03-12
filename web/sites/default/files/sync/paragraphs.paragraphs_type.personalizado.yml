@@ -1,0 +1,15 @@
+uuid: bcc775ed-35e9-42ee-b45b-19c860d077a1
+langcode: es
+status: true
+dependencies:
+  module:
+    - paragraphs_library
+third_party_settings:
+  paragraphs_library:
+    allow_library_conversion: true
+id: personalizado
+label: Personalizado
+icon_uuid: null
+icon_default: null
+description: 'Un parrafo personalizado'
+behavior_plugins: {  }

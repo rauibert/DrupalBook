@@ -1,0 +1,21 @@
+uuid: d50077cc-324f-47db-b1dd-e230079b1fa3
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_stock_del_libro
+    - node.type.libro
+  module:
+    - options
+id: node.libro.field_stock_del_libro
+field_name: field_stock_del_libro
+entity_type: node
+bundle: libro
+label: 'Stock del libro'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

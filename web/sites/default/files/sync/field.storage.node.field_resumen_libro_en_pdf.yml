@@ -1,0 +1,23 @@
+uuid: 2183e6af-fe2d-486a-a49a-402d65216aad
+langcode: es
+status: true
+dependencies:
+  module:
+    - file
+    - node
+id: node.field_resumen_libro_en_pdf
+field_name: field_resumen_libro_en_pdf
+entity_type: node
+type: file
+settings:
+  target_type: file
+  display_field: false
+  display_default: false
+  uri_scheme: public
+module: file
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,21 @@
+uuid: 2d8fdf51-5c9a-497a-8ea3-8cbbd8bd534a
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_text_2
+    - paragraphs.paragraphs_type.personalizado
+  module:
+    - text
+id: paragraph.personalizado.field_text_2
+field_name: field_text_2
+entity_type: paragraph
+bundle: personalizado
+label: 'Text 2'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

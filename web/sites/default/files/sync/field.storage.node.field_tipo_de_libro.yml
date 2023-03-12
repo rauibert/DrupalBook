@@ -1,0 +1,27 @@
+uuid: a2886375-1d9f-4f65-bc63-0fb9547050cb
+langcode: es
+status: true
+dependencies:
+  module:
+    - node
+    - options
+id: node.field_tipo_de_libro
+field_name: field_tipo_de_libro
+entity_type: node
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: Ficción
+      label: Ficción
+    -
+      value: 'No ficción'
+      label: 'No ficción'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false
