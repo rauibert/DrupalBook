@@ -17,10 +17,13 @@
     "require": {
         "composer/installers": "^1.9",
         "drupal/admin_toolbar": "^3.3",
+        "drupal/bootstrap": "^3.26",
+        "drupal/bootstrap_paragraphs": "^2.0@beta",
         "drupal/core-composer-scaffold": "^9.5",
         "drupal/core-project-message": "^9.5",
         "drupal/core-recommended": "^9.5",
         "drupal/devel": "^5.0",
+        "drupal/entity_usage": "^2.0@beta",
         "drupal/paragraphs": "^1.15",
         "drupal/views_bulk_operations": "^4.2",
         "drush/drush": "^11.5"
