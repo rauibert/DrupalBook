@@ -1,0 +1,43 @@
+uuid: 76e003fe-c06e-4364-9009-1e9021133795
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.personalizado.field_image_1
+    - field.field.paragraph.personalizado.field_text
+    - field.field.paragraph.personalizado.field_text_2
+    - paragraphs.paragraphs_type.personalizado
+  module:
+    - image
+    - text
+id: paragraph.personalizado.default
+targetEntityType: paragraph
+bundle: personalizado
+mode: default
+content:
+  field_image_1:
+    type: image
+    label: above
+    settings:
+      image_link: ''
+      image_style: ''
+      image_loading:
+        attribute: lazy
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_text:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_text_2:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 2
+    region: content
+hidden: {  }

@@ -1,0 +1,27 @@
+uuid: bb3dbbf4-b78e-4ac4-ab34-4e060e377296
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_resumen_libro_en_pdf
+    - node.type.libro
+  module:
+    - file
+id: node.libro.field_resumen_libro_en_pdf
+field_name: field_resumen_libro_en_pdf
+entity_type: node
+bundle: libro
+label: 'Resumen libro en pdf'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:file'
+  handler_settings: {  }
+  file_directory: '[date:custom:Y]-[date:custom:m]'
+  file_extensions: pdf
+  max_filesize: ''
+  description_field: false
+field_type: file

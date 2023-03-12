@@ -1,0 +1,27 @@
+uuid: fb2003c4-af3d-4cbf-bda0-e9b550378ab6
+langcode: es
+status: true
+dependencies:
+  module:
+    - node
+    - options
+id: node.field_stock_del_libro
+field_name: field_stock_del_libro
+entity_type: node
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: 'En stock'
+      label: 'En stock'
+    -
+      value: Descatalogado
+      label: Descatalogado
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

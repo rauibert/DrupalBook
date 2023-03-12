@@ -1,0 +1,21 @@
+uuid: 639760f2-1ef3-48fb-b3e9-42e15d3b54dd
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.bp_header
+    - paragraphs.paragraphs_type.bp_accordion
+_core:
+  default_config_hash: s1XBIqn7vbRpqzLFsTbhtI4FJdNHewIXkQnfG2OHJxI
+id: paragraph.bp_accordion.bp_header
+field_name: bp_header
+entity_type: paragraph
+bundle: bp_accordion
+label: Header
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

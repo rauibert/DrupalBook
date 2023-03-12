@@ -1,0 +1,64 @@
+uuid: ce7dfd87-9911-495a-9276-92262a7d7a3b
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.field.node.libro.body
+    - field.field.node.libro.field_resumen_libro_en_pdf
+    - field.field.node.libro.field_stock_del_libro
+    - field.field.node.libro.field_tipo_de_libro
+    - field.field.node.libro.field_titulo_libro
+    - node.type.libro
+  module:
+    - file
+    - options
+    - text
+    - user
+id: node.libro.default
+targetEntityType: node
+bundle: libro
+mode: default
+content:
+  body:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_resumen_libro_en_pdf:
+    type: file_default
+    label: above
+    settings:
+      use_description_as_link_text: true
+    third_party_settings: {  }
+    weight: 5
+    region: content
+  field_stock_del_libro:
+    type: list_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 4
+    region: content
+  field_tipo_de_libro:
+    type: list_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_titulo_libro:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  langcode: true
