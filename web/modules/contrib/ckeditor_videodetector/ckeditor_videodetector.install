@@ -1,0 +1,64 @@
+<?php
+
+/**
+ * @file
+ * Contains library file requirement check and update hooks.
+ */
+
+/**
+ * Implements hook_requirements().
+ */
+function ckeditor_videodetector_requirements(string $phase): array {
+  $requirements = [];
+
+  switch ($phase) {
+    case 'install':
+    case 'runtime':
+      $plugin_detected = FALSE;
+
+      // Libraries path.
+      $libraries_path = 'libraries/videodetector';
+      if (\Drupal::hasService('library.libraries_directory_file_finder')) {
+        /** @var \Drupal\Core\Asset\LibrariesDirectoryFileFinder $library_file_finder */
+        $library_file_finder = \Drupal::service('library.libraries_directory_file_finder');
+        // Check primary/default path.
+        $libraries_path = $library_file_finder->find('videodetector');
+        if (!$libraries_path) {
+          // Check ckeditor secondary path.
+          $libraries_path = $library_file_finder->find('ckeditor/plugins/videodetector');
+        }
+      }
+      elseif (function_exists('libraries_get_path')) {
+        // Check primary/default path.
+        $libraries_path = libraries_get_path('videodetector');
+        if (!$libraries_path) {
+          // Check ckeditor secondary path.
+          $libraries_path = libraries_get_path('ckeditor/plugins/videodetector');
+        }
+      }
+
+      // Check for required files.
+      if (file_exists($libraries_path . '/plugin.js')) {
+        $plugin_detected = TRUE;
+      }
+
+      // Was plugin detected?
+      if ($plugin_detected) {
+        $message = t('Video detector plugin detected in %path', ['%path' => $libraries_path]);
+      }
+      else {
+        $message = t('Video detector plugin was not found.');
+      }
+
+      // Set requirements.
+      $requirements['ckeditor_videodetector'] = [
+        'title' => t('Video Detector CKEditor Plugin'),
+        'value' => $message,
+        'severity' => $plugin_detected ? REQUIREMENT_OK : REQUIREMENT_ERROR,
+        'description' => t('Before you can use the Video detector module, you need to download the plugin from ckeditor.com and place it in libraries folder. Check the README for more information. <a href=":plugin_url">Get the plugin here</a>.', [':plugin_url' => 'https://ckeditor.com/addon/videodetector']),
+      ];
+      break;
+  }
+
+  return $requirements;
+}
