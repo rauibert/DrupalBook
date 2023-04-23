@@ -1,0 +1,13 @@
+name: Video Detector
+type: module
+description: This plugin allows you to insert videos from Youtube, Vimeo or Dailymotion only pasting an URL or embed code. The inserted videos will catch the full CKEditor width and will be fully responsive.
+core: 8.x
+core_version_requirement: ^8 || ^9 || ^10
+package: CKEditor
+dependencies:
+  - drupal:ckeditor
+
+# Information added by Drupal.org packaging script on 2022-08-23
+version: '8.x-2.1'
+project: 'ckeditor_videodetector'
+datestamp: 1661282052

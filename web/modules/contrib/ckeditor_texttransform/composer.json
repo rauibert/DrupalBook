@@ -1,0 +1,32 @@
+{
+    "name": "drupal/ckeditor_texttransform",
+    "type": "drupal-module",
+    "description": "Integrates the CKEditor \"Text Transform\" plugin.",
+    "keywords": [
+        "Drupal",
+        "Ckeditor",
+        "Text Transform"
+    ],
+    "license": "GPL-2.0+",
+    "homepage": "https://drupal.org/project/ckeditor_texttransform",
+    "minimum-stability": "dev",
+    "authors": [
+        {
+            "name": "George Anderson (geoanders)",
+            "homepage": "https://www.drupal.org/u/geoanders",
+            "role": "Maintainer"
+        },
+        {
+            "name": "Will Long (kerasai)",
+            "homepage": "https://www.drupal.org/u/kerasai",
+            "role": "Maintainer"
+        }
+    ],
+    "support": {
+        "issues": "https://drupal.org/project/issues/ckeditor_texttransform",
+        "source": "https://git.drupalcode.org/project/ckeditor_texttransform"
+    },
+    "require": {
+        "drupal/core": "^8 || ^9 || ^10"
+    }
+}

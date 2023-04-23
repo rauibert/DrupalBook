@@ -1,0 +1,64 @@
+<?php
+
+/**
+ * @file
+ * Contains library file requirement check and update hooks.
+ */
+
+/**
+ * Implements hook_requirements().
+ */
+function ckeditor_texttransform_requirements(string $phase): array {
+  $requirements = [];
+
+  switch ($phase) {
+    case 'install':
+    case 'runtime':
+      $plugin_detected = FALSE;
+
+      // Libraries path.
+      $libraries_path = 'libraries/texttransform';
+      if (\Drupal::hasService('library.libraries_directory_file_finder')) {
+        /** @var \Drupal\Core\Asset\LibrariesDirectoryFileFinder $library_file_finder */
+        $library_file_finder = \Drupal::service('library.libraries_directory_file_finder');
+        // Check primary/default path.
+        $libraries_path = $library_file_finder->find('texttransform');
+        if (!$libraries_path) {
+          // Check ckeditor secondary path.
+          $libraries_path = $library_file_finder->find('ckeditor/plugins/texttransform');
+        }
+      }
+      elseif (function_exists('libraries_get_path')) {
+        // Check primary/default path.
+        $libraries_path = libraries_get_path('texttransform');
+        if (!$libraries_path) {
+          // Check ckeditor secondary path.
+          $libraries_path = libraries_get_path('ckeditor/plugins/texttransform');
+        }
+      }
+
+      // Check for required files.
+      if (file_exists($libraries_path . '/plugin.js')) {
+        $plugin_detected = TRUE;
+      }
+
+      // Was plugin detected?
+      if ($plugin_detected) {
+        $message = t('Text transform plugin detected in %path', ['%path' => $libraries_path]);
+      }
+      else {
+        $message = t('Text transform plugin was not found.');
+      }
+
+      // Set requirements.
+      $requirements['ckeditor_texttransform'] = [
+        'title' => t('Text Transform CKEditor Plugin'),
+        'value' => $message,
+        'severity' => $plugin_detected ? REQUIREMENT_OK : REQUIREMENT_ERROR,
+        'description' => t('Before you can use the Text transform module, you need to download the plugin from ckeditor.com and place it in libraries folder. Check the README for more information. <a href=":plugin_url">Get the plugin here</a>.', [':plugin_url' => 'https://ckeditor.com/addon/texttransform']),
+      ];
+      break;
+  }
+
+  return $requirements;
+}

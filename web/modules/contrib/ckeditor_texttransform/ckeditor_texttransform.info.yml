@@ -1,0 +1,13 @@
+name: Text Transform
+type: module
+description: Integrates the CKEditor "Text Transform" plugin.
+core: 8.x
+core_version_requirement: ^8 || ^9 || ^10
+package: CKEditor
+dependencies:
+  - drupal:ckeditor
+
+# Information added by Drupal.org packaging script on 2022-08-23
+version: '8.x-2.1'
+project: 'ckeditor_texttransform'
+datestamp: 1661281975
