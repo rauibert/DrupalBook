@@ -1,0 +1,7 @@
+comic.settings:
+  path: '/admin/config/comic_settings'
+  defaults:
+    _form: '\Drupal\comic\Form\ComicSettingsForm'
+    _title: 'Comic settings'
+  requirements:
+    _permission: 'administer site configuration'

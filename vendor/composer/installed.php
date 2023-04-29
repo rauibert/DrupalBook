@@ -1,11 +1,11 @@
 <?php return array(
     'root' => array(
-        'pretty_version' => 'dev-main',
-        'version' => 'dev-main',
+        'pretty_version' => 'dev-develop',
+        'version' => 'dev-develop',
         'type' => 'project',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
-        'reference' => 'e7502309c637c556e1ff5d4074d50a12b5623b49',
+        'reference' => 'd988431bc603053b5dbfa1646bb7f12d831efbb1',
         'name' => 'drupal/recommended-project',
         'dev' => true,
     ),
@@ -601,6 +601,15 @@
             'reference' => '5.1.1',
             'dev_requirement' => false,
         ),
+        'drupal/eck' => array(
+            'pretty_version' => '1.0.0-beta2',
+            'version' => '1.0.0.0-beta2',
+            'type' => 'drupal-module',
+            'install_path' => __DIR__ . '/../../web/modules/contrib/eck',
+            'aliases' => array(),
+            'reference' => '8.x-1.0-beta2',
+            'dev_requirement' => false,
+        ),
         'drupal/entity_reference_revisions' => array(
             'pretty_version' => '1.10.0',
             'version' => '1.10.0.0',
@@ -656,12 +665,12 @@
             'dev_requirement' => false,
         ),
         'drupal/recommended-project' => array(
-            'pretty_version' => 'dev-main',
-            'version' => 'dev-main',
+            'pretty_version' => 'dev-develop',
+            'version' => 'dev-develop',
             'type' => 'project',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
-            'reference' => 'e7502309c637c556e1ff5d4074d50a12b5623b49',
+            'reference' => 'd988431bc603053b5dbfa1646bb7f12d831efbb1',
             'dev_requirement' => false,
         ),
         'drupal/views_bulk_operations' => array(

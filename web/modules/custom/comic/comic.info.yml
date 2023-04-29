@@ -1,0 +1,5 @@
+name: Comic module
+description: Provides a connection with a oracle db
+package: Extra modules
+type: module
+core_version_requirement: ^9.2 || ^10

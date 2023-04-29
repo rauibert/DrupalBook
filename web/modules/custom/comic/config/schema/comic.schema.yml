@@ -1,0 +1,7 @@
+comic.settings:
+  type: config_object
+  label: 'Comic module settings'
+  mapping:
+    id_comic:
+      type: integer
+      label: 'Id del comic'
