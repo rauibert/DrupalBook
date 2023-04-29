@@ -124,3 +124,6 @@ oauth_keys/
 # css, js files directory
 sites/default/files/css/
 sites/default/files/js/
+sites/default/files/php/
+
+

@@ -1,0 +1,5 @@
+comic.settings:
+  title: 'Comic module'
+  description: 'Configure the Comic module.'
+  route_name: comic.settings
+  parent: system.admin_config_ui
