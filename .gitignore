@@ -120,3 +120,7 @@ oauth_keys/
 
 # ddev
 .ddev/
+
+# css, js files directory
+sites/default/files/css/
+sites/default/files/js/
