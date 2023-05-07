@@ -122,8 +122,8 @@ oauth_keys/
 .ddev/
 
 # css, js files directory
-sites/default/files/css/
-sites/default/files/js/
-sites/default/files/php/
+/web/sites/default/files/css/
+/web/sites/default/files/js/
+/web/sites/default/files/php/
 
 
