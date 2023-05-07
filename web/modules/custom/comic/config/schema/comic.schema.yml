@@ -5,3 +5,6 @@ comic.settings:
     id_comic:
       type: integer
       label: 'Id del comic'
+    description_comic:
+      type: text
+      label: 'Descripción del comic'
